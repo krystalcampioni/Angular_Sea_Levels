@@ -3,4 +3,9 @@
   @include outer-container;
   color: $contrast-color;
   min-height: 100vh;
+
+  &__main {
+    @include span-columns(6 of 12);
+    @include shift(3);
+  }
 }
