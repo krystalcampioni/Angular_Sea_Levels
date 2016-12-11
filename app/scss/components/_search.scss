@@ -1,7 +1,57 @@
 .search {
-  &__form {
-    background: $gray;
-    padding: 10px;
-    box-shadow: inset 0 11px 40px -10px rgba(0,0,0,0.8);
+  background: $gray;
+  padding: 10px;
+  box-shadow: inset 0 11px 40px -10px rgba(0,0,0,0.8);
+
+  &__wrapper {
+    @include outer-container;
+  }
+
+  &__button-wrapper {
+    float: left;
+    vertical-align: top;
+
+    @include media($tablet) {
+      display: inline-block;
+      float: none;
+      text-align: center;
+    }
+  }
+
+  &__input {
+    border: none;
+    float: left;
+    height: 32px;
+    outline: 0;
+    padding: 6px;
+  }
+
+  &__input-wrapper {
+    float: right;
+    padding-top: 5px;
+
+    @include media($tablet) {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  &__button {
+    @include transition(all .4s ease);
+    background: $complementary-color;
+    border: 0;
+    color: $contrast-color;
+    float: left;
+    font-size: .875rem;
+    height: 32px;
+    padding: 0 10px;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      background: darken($secondary-color, 40%);
+      color: $contrast-color;
+      outline: none;
+    }
   }
 }

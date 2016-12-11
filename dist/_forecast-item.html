@@ -1,1 +1,1 @@
-<div class="panel" ng-show="isNine(useDayForecast.dt_txt)"><h3 class="panel__title">{{useDayForecast.dt * 1000 | date:"dd/MM/yyyy"}}</h3><h1>{{useDayForecast.main.sea_level}}</h1></div>
+<div class="sea-level" ng-show="isNine(useDayForecast.dt_txt)"><h3 class="sea-level__date">{{useDayForecast.dt * 1000 | date:"dd/MM/yyyy"}}</h3><h1 class="sea-level__info">{{useDayForecast.main.sea_level}}</h1></div>

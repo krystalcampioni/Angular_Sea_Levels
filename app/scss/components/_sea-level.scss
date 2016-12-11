@@ -1,0 +1,27 @@
+.sea-level {
+  text-align: center;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+
+  &__date {
+    display: inline-block;
+    font-weight: lighter;
+  }
+
+  &__info {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  &__icon {
+    color: $secondary-color;
+    border: 1px solid;
+    padding-top: 6px;
+    border-radius: 150px;
+    width: 40px;
+    height: 40px;
+    margin-top: -8px;
+    margin-right: 10px;
+    margin-left: -30px;
+  }
+}

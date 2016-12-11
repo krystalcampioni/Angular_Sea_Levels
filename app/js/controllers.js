@@ -4,16 +4,15 @@ angular.module('weatherApp.controllers', [])
       function($scope,openWeatherMap,cities) {
 
     $scope.message = '';
-    $scope.hasState = '';
 
     $scope.cities = cities;
 
-    // Get daily forecast for initial page
+    // Get forecast for sea levels modal
     $scope.forecast = openWeatherMap.queryForecast({
       location: cities[ 0 ]
     });
 
-    // $scope.forecast.currentWeather = "ahoy";
+    // Get weather info for initial page
     $scope.currentWeather = openWeatherMap.queryWeather({
       location: cities[ 0 ]
     });

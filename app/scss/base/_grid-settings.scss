@@ -1,7 +1,7 @@
 @import 'neat-helpers'; // or '../neat/neat-helpers' when not in Rails
 
 $small-screen: 500px;
-$medium-screen: 800px;
+$medium-screen: 780px;
 $large-screen: 1400px;
 
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);

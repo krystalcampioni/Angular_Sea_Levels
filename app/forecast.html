@@ -1,16 +1,22 @@
-<section class="search">
-    <div class="main">
-      <form class="search__form" role="form">
-        <button class="button button--primary" ng-repeat="item in cities" ng-click="setLocation(item)" type="submit" >{{item}}</button>
-        <span class="form-group {{hasState}}">
-            <label class="sr-only" for="location">City</label>
-            <input ng-model="location" type="text" class="form-control" id="location" placeholder="City">
-        </span>
-        <button ng-click="getForecastByLocation(location)" type="submit" class="btn btn-primary">Search!</button>
-        <span ng-show="message" class="alert"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>{{message}}</span>
-      </form>
-    </div>
-</section>
+<header class="header">
+  <h1 class="header__title">
+    <b>Weather</b>App
+  </h1>
+  <section class="search">
+      <div class="search__wrapper">
+        <form class="search__form" role="form">
+          <div class="search__button-wrapper">
+            <button class="button button--primary" ng-repeat="item in cities" ng-click="setLocation(item)" type="submit" >{{item}}</button>
+          </div>
+          <div class="search__input-wrapper">
+            <input ng-model="location" type="text" class="search__input" id="location" placeholder="Search for city">
+            <button ng-click="getForecastByLocation(location)" type="submit" class="search__button">Search</button>
+          </div>
+          </form>
+      </div>
+  </section>
+</header>
+
 <section class="wrapper">
 <div class="wrapper__main">
   <h2 class="card__city">
@@ -38,8 +44,6 @@
   </article>
 
 
-  <!-- xx -->
-
   <button ng-click="showSeaLevels=true" class="button button--secondary">Sea levels</button>
   </section>
   <section ng-show="showSeaLevels">
@@ -47,8 +51,8 @@
       <div class="modal__content">
         <header class="modal__header">
           <h1 class="modal__title">
-            <i class="wi wi-flood"></i>
-            Sea Levels at 9:00
+            <i class="sea-level__icon wi wi-flood"></i>
+            Sea Levels at 9:00am
           </h1>
           <button class="modal__close" ng-click="showSeaLevels=false">✕</button>
         </header>

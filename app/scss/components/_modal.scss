@@ -1,8 +1,13 @@
 .modal {
   &__close {
+    @include appearance(none);
+    background: none;
+    border: none;
+    color: $complementary-color;
+    font-size: 22px;
     position: absolute;
-    top: 0;
-    right: 0;
+    right: 5px;
+    top: 5px;
   }
 
   &__header {
@@ -26,7 +31,7 @@
 
   &__overlay {
     @include position(fixed, 0);
-    background-color: rgba($gray, 0.85);
+    background-color: rgba($primary-color, 0.85);
     padding-top: 0.6em;
     text-align: center;
     transition: opacity 0.25s ease;
@@ -42,8 +47,8 @@
   }
 
   &__content {
-    background: $contrast-color;
-    color: $gray;
+    background: $gray;
+    color: $contrast-color;
     margin-top: 0;
     margin: auto;
     min-height: 70%;

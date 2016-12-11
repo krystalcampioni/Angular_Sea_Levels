@@ -1,11 +1,13 @@
 .header {
   background: rgba($gray,0.9);
-  padding: 10px;
+  position: fixed;
   text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 
   &__title {
     font-size: 26px;
     font-weight: lighter;
-    margin: 5px;
   }
 }
