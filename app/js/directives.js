@@ -3,13 +3,12 @@ angular.module('weatherApp.directives', [])
     return {
       scope: {
         useDayForecast: '=showEntry',
-        forecast: '=forecastItem'
+        forecast: '=forecastItem',
       },
 
       templateUrl: '_forecast-item.html',
 
       link: function(scope, element, attrs) {
-
         scope.getIconImageUrl = function(iconName) {
           return (iconName ? 'http://openweathermap.org/img/w/' + iconName + '.png' : '');
         };
