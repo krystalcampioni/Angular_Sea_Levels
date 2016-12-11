@@ -1,7 +1,7 @@
 angular.module('weatherApp.controllers', [])
   .controller('OpenWeatherCtrl',
-    ['$scope','openWeatherMap','cities','ISO3166',
-      function($scope,openWeatherMap,cities,ISO3166) {
+    ['$scope','openWeatherMap','cities',
+      function($scope,openWeatherMap,cities) {
 
     $scope.message = '';
     $scope.hasState = '';

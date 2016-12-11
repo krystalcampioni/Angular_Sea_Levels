@@ -16,6 +16,10 @@ angular.module('weatherApp.directives', [])
         scope.parseDate = function (time) {
           return new Date(time * 1000);
         };
+
+        scope.isNine = function(dt_txt){
+          return _.includes(dt_txt, '09:00')
+        }
       }
     }
   }])

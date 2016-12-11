@@ -1,5 +1,5 @@
 angular.module('weatherApp.services', ['ngResource'])
-  .value('cities',['Amsterdam','London','Berlin','Paris','Madrid'])
+  .value('cities',['Amsterdam, NL','London, UK','Berlin, DE','Paris, FR','Madrid, ES'])
 
   .factory('openWeatherMap', function($resource) {
 

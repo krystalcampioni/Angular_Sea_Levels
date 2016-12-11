@@ -1,4 +1,6 @@
-<div class="panel">
+<div class="panel" ng-show="isNine(useDayForecast.dt_txt)">
+  <h1>{{useDayForecast.dt_txt}}</h1>
+
   <h3 class="panel__title">{{parseDate(useDayForecast.dt) | date:'fullDate'}}</h3>
   <div class="panel__body">
     <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" />
