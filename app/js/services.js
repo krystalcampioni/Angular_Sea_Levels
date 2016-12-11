@@ -28,7 +28,8 @@ angular.module('weatherApp.services', ['ngResource'])
         queryForecast: {
           method: 'JSONP',
           params: {
-            path: 'forecast'
+            path: 'forecast',
+            cnt: 5
           },
           isArray: false,
           headers: {

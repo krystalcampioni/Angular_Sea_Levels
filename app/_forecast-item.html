@@ -2,10 +2,11 @@
   <div class="panel__title">{{parseDate(useDayForecast.dt) | date:'fullDate'}}</div>
   <div class="panel__body">
       <div>
-          <p>
+        <p>
               <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" />
               {{useDayForecast.temp.day | number:1}}&#176;C {{useDayForecast.weather[0].main}}
           </p>
+          <h1>{{useDayForecast.main.sea_level}}</h1>
           <p>
               {{useDayForecast.weather[0].description}}&nbsp;&#126;&nbsp;
               High: {{useDayForecast.temp.max}}&#176;C&nbsp;&#126;&nbsp;

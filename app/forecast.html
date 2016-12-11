@@ -7,9 +7,8 @@
         </div>
     </section>
     <div ng-show="true">
-      <h3>
-          {{forecast.city.name | placeholder:'?'}}, {{forecast.city.country | isoCountry}}
-      </h3>
+      <h2>{{forecast.city.name | placeholder:'loading... '}}</h2>
+      <h3>{{forecast.city.country | isoCountry}}</h3>
       <section>
         <div ng-repeat="forecast in forecast.list">
             <div forecast-item="forecast" show-entry="forecast"></div>
