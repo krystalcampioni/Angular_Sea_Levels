@@ -1,0 +1,6 @@
+.wrapper {
+  @include linear-gradient($primary-color, $complementary-color);
+  @include outer-container;
+  color: $contrast-color;
+  min-height: 100vh;
+}

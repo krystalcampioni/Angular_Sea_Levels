@@ -2,7 +2,7 @@
     <section class="search">
         <div class="main">
           <form class="search__form" role="form">
-            <button ng-repeat="item in cities" ng-click="setLocation(item)" type="submit" >{{item}}</button>
+            <button class="button button--primary" ng-repeat="item in cities" ng-click="setLocation(item)" type="submit" >{{item}}</button>
           </form>
         </div>
     </section>
@@ -12,6 +12,7 @@
       <img ng-src="{{getIconImageUrl(currentWeather.weather[0].icon)}}" />
       <p ng-show="currentWeather.name">sunrise: {{currentWeather.sys.sunrise * 1000 | date:"h:mma" }}</p>
       <p ng-show="currentWeather.name">sunset: {{currentWeather.sys.sunset * 1000 | date:"h:mma"}}</p>
+
       <section>
         <hr/>
         <div ng-repeat="forecast in forecast.list">
