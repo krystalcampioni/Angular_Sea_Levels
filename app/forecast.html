@@ -11,7 +11,7 @@
       </form>
     </div>
 </section>
-
+<section class="wrapper">
 <div class="wrapper__main">
   <h2 class="card__city">
     {{currentWeather.name | placeholder:'loading... '}}
@@ -35,15 +35,29 @@
       sunset:
       <b>{{currentWeather.sys.sunset * 1000 | date:"h:mma"}}</b>
     </div>
-    <button class="button button--secondary">show sea levels</button
   </article>
 
 
+  <!-- xx -->
 
-  <section ng-show="false">
-    <hr/>
-    <div ng-repeat="forecast in forecast.list">
-        <div forecast-item="forecast" show-entry="forecast"></div>
+  <button ng-click="showSeaLevels=true" class="button button--secondary">Sea levels</button>
+  </section>
+  <section ng-show="showSeaLevels">
+    <div  class="modal__overlay">
+      <div class="modal__content">
+        <header class="modal__header">
+          <h1 class="modal__title">
+            <i class="wi wi-flood"></i>
+            Sea Levels at 9:00
+          </h1>
+          <button class="modal__close" ng-click="showSeaLevels=false">✕</button>
+        </header>
+        <div class="modal__body">
+          <div ng-repeat="forecast in forecast.list">
+              <div forecast-item="forecast" show-entry="forecast"></div>
+           </div>
+        </div>
      </div>
+   </div>
   </section>
 </div>

@@ -1,0 +1,67 @@
+.modal {
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__header {
+    border-bottom: 1px solid $secondary-color;
+    height: 65px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__body {
+    bottom: 0;
+    height: calc(100% - 65px);
+    left: 0;
+    overflow: scroll;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__overlay {
+    @include position(fixed, 0);
+    background-color: rgba($gray, 0.85);
+    padding-top: 0.6em;
+    text-align: center;
+    transition: opacity 0.25s ease;
+    z-index: 99999999999;
+
+    @include media($tablet) {
+      padding-top: 5em;
+    }
+
+    @include media($medium-screen-up) {
+       padding-top: 10em;
+     }
+  }
+
+  &__content {
+    background: $contrast-color;
+    color: $gray;
+    margin-top: 0;
+    margin: auto;
+    min-height: 70%;
+    max-height: 95%;
+    overflow: auto;
+    padding: 3em;
+    position: relative;
+    transition: opacity 0.25s ease;
+    width: 95%;
+
+    @include media($medium-screen) {
+      max-height: 70%;
+      padding: 3em;
+      width: 60%;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
+    }
+  }
+}

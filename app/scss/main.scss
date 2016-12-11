@@ -4,3 +4,8 @@
 
 @import "base/*";
 @import "components/*";
+
+body {
+  @include linear-gradient($primary-color, $complementary-color);
+  color: $contrast-color;
+}
