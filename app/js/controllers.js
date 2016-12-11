@@ -7,7 +7,6 @@ angular.module('weatherApp.controllers', [])
     $scope.hasState = '';
 
     $scope.cities = cities;
-    $scope.iconBaseUrl = 'http://openweathermap.org/img/w/';
 
     // Get daily forecast for initial page
     $scope.forecast = openWeatherMap.queryForecast({
@@ -29,13 +28,8 @@ angular.module('weatherApp.controllers', [])
     };
 
     // Change current location on buttons clicks
-
     $scope.setLocation = function(loc) {
       $scope.location = loc;
       $scope.getForecastByLocation();
-    };
-
-    $scope.getIconImageUrl = function(iconName) {
-      return (iconName ? $scope.iconBaseUrl + iconName + '.png' : '');
     };
 }])

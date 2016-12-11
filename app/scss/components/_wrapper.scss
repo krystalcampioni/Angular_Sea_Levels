@@ -7,5 +7,6 @@
   &__main {
     @include span-columns(6 of 12);
     @include shift(3);
+    text-align: center;
   }
 }

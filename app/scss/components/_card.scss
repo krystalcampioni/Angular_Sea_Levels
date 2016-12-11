@@ -1,0 +1,55 @@
+.card {
+
+  &__icon {
+    background: rgba($gray, .6);
+    border-radius: 150px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding-top: 21px;
+  }
+
+  &__city {
+    border-bottom: 1px solid rgba($contrast-color, .4);
+    font-size: rem(40);
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 15px 0;
+  }
+
+  &__country {
+    font-weight: lighter;
+    opacity: .6;
+    font-size: rem(28);
+  }
+
+  &__description,
+  &__date {
+    display: inline-block;
+    margin: 0 15px 20px 0;
+  }
+
+  &__description {
+    color: $secondary-color;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &__temperature {
+    border-bottom: 1px solid $contrast-color;
+    font-size: rem(80);
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+
+    sup { font-size: rem(40); }
+  }
+
+  &__sun {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: calc(50% - 20px);
+
+    i { color: $yellow}
+  }
+}

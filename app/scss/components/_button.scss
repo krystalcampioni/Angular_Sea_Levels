@@ -33,14 +33,21 @@
 
 
   &--secondary {
-    border: 1px solid $contrast-color;
-    color: $contrast-color;
-    text-align: center;
+    background: none;
+    border: 1px solid $gray;
+    color: $gray;
     font-size: rem(14);
+    margin: 5px;
+    padding: 8px 10px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
 
-    &:hover {
-      background: $contrast-color;
-      color: $primary-color;
+    &:hover,
+    &:focus {
+      background: $gray;
+      color: $contrast-color;
+      outline: none;
     }
   }
 }
