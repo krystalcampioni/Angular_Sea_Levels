@@ -13,13 +13,9 @@ angular.module('weatherApp.directives', [])
           return (iconName ? 'http://openweathermap.org/img/w/' + iconName + '.png' : '');
         };
 
-        scope.parseDate = function (time) {
-          return new Date(time * 1000);
-        };
-
         scope.isNine = function(dt_txt){
           return _.includes(dt_txt, '09:00')
-        }
+        };
       }
     }
   }])

@@ -1,13 +1,12 @@
 <div class="panel" ng-show="isNine(useDayForecast.dt_txt)">
-  <h1>{{useDayForecast.dt_txt}}</h1>
-
-  <h3 class="panel__title">{{parseDate(useDayForecast.dt) | date:'fullDate'}}</h3>
+  <h3 class="panel__title">{{useDayForecast.dt * 1000 | date:"dd/MM/yyyy"}}</h3>
+  <h1>Sea level at 09:00</h1>
   <div class="panel__body">
     <img ng-src="{{getIconImageUrl(useDayForecast.weather[0].icon)}}" />
-      <h1>{{useDayForecast.main.temp}}&#176;C</h1>
+      <!-- <h1>{{useDayForecast.main.temp}}&#176;C</h1>
       <h2>{{useDayForecast.weather[0].main}}</h2>
-      <p>{{useDayForecast.weather[0].description}}</p>
-      <p>sea level: {{useDayForecast.main.sea_level}}</p>
+      <p>{{useDayForecast.weather[0].description}}</p> -->
+      <h1><p>sea level: {{useDayForecast.main.sea_level}}</p></h1>
       <hr/>
   </div>
 </div>

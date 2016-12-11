@@ -14,9 +14,16 @@ angular.module('weatherApp.controllers', [])
       location: cities[ 0 ]
     });
 
+    // $scope.forecast.currentWeather = "ahoy";
+    $scope.currentWeather = openWeatherMap.queryWeather({
+      location: cities[ 0 ]
+    });
 
     $scope.getForecastByLocation = function() {
       $scope.forecast = openWeatherMap.queryForecast({
+        location: $scope.location
+      });
+      $scope.currentWeather = openWeatherMap.queryWeather({
         location: $scope.location
       });
     };
