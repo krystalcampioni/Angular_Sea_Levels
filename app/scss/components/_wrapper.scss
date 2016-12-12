@@ -13,6 +13,8 @@
     }
 
     @include media($mobile){
+      @include shift(0);
+      @include span-columns(12 of 12);
       padding-top: 200px;
     }
   }

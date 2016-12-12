@@ -43,6 +43,11 @@
     width: 100%;
     text-transform: uppercase;
 
+    @include media($mobile) {
+      width: calc(100% - 40px);
+      margin: 20px;
+    }
+
     &:hover,
     &:focus {
       background: $gray;
