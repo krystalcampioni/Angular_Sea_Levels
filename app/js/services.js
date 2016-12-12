@@ -36,18 +36,6 @@ angular.module('weatherApp.services', ['ngResource'])
             'x-api-key': apiKey
           }
         },
-        queryForecastDaily: {
-          method: 'JSONP',
-          params: {
-            path: 'forecast',
-            subPath: 'daily',
-            cnt: 7
-          },
-          isArray: false,
-          headers: {
-            'x-api-key': apiKey
-          }
-        }
       }
     )
   });
