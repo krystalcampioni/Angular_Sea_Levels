@@ -6,7 +6,9 @@
 
 html,
 body {
+  @include linear-gradient($primary-color, $complementary-color);
+  color: $contrast-color;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
 }

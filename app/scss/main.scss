@@ -2,10 +2,7 @@
 @import "bourbon";
 @import "neat";
 
+@import "base/variables";
 @import "base/*";
-@import "components/*";
 
-body {
-  @include linear-gradient($primary-color, $complementary-color);
-  color: $contrast-color;
-}
+@import "components/*";

@@ -32,10 +32,17 @@ This project relies on a webserver to make requests to the Open Weather Map API,
 ## File structure
 The source code is on the `app` folder. This project uses [Gulp](http://gulpjs.com/) to run several tasks and outputs a final production ready version of the code to the `dist` folder.
 
+* **app/** all html files are kept here
+
 * **app/js**
 You'll find an `app.js` file that declares the angular module, dependencies and routes. The `controllers`, `directives`, `filters` and `services` are kept in different files.
 
-* **app/lib** 
+* **app/lib** this project uses [iso-3166-country-codes-angular](https://github.com/rsertelon/iso-3166-country-codes-angular) to convert country codes fetched from the API into country Names. The `lib` folder is intended for external code libraries.
+
+* **app/scss** this project uses the css preprocessor [Sass](http://sass-lang.com/) as a css preprocessor and the [BEM](http://getbem.com/naming/) naming convention
+  * **app/scss/components** this folder contains a file for each component or "block". Inside each component you'll find it's elements and modifiers, nested under the main class.
+  * **app/scss/base** on this folder you'll find non-component related styles, like grid settings and variables
+  * **app/scss/main.scss** use this file to import all other scss files, fonts and scss libraries
 
 
 
