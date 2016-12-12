@@ -1,16 +1,98 @@
 .sea-level {
-  text-align: center;
-  padding: 0 20px;
+  text-align: left;
+  padding: 0 75px 0 60px;
   border-bottom: 1px solid rgba(0,0,0,.2);
+  position: relative;
+  height: 100px;
+
+  &__bar {
+    background: darken($gray, 10%);
+    display: block;
+    float: left;
+    height: 75px;
+    left: 20px;
+    position: absolute;
+    top: 0;
+    width: 26px;
+    z-index: 10;
+    border-left: 1px solid $secondary-color;
+
+    &::before {
+      background: $secondary-color;
+      box-shadow: 0 10px 0 $secondary-color,
+                  0 20px 0 $secondary-color,
+                  0 30px 0 $secondary-color,
+                  -5px 40px 0px 0px $secondary-color,
+                  0 40px 0px 0px $secondary-color,
+                  0 50px 0 $secondary-color,
+                  0 60px 0 $secondary-color,
+                  0 70px 0 $secondary-color,
+                  0 80px 0 $secondary-color;
+      content: '';
+      height: 1px;
+      left: -5px;
+      overflow: hidden;
+      position: absolute;
+      top: 2px;
+      transform: scale(.88);
+      width: 10px;
+      width: 5px;
+      z-index: 0;
+    }
+
+    span {
+      background: rgba($primary-color, .8);
+      bottom: 0;
+      float: left;
+      left: 0;
+      position: absolute;
+      width: 25px;
+      max-height: 75px;
+    }
+  }
 
   &__date {
-    display: inline-block;
+    display: block;
     font-weight: lighter;
+    text-align: left;
+    font-size: 16px;
+    opacity: .8;
+  }
+
+  &__diff {
+    @include size(40px);
+    background: darken($gray, 10%);
+    border-radius: 250px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    text-align: center;
+    padding-top: 10px;
   }
 
   &__info {
+    color: $secondary-color;
     display: inline-block;
-    margin: 10px;
+    font-size: rem(22);
+    margin: 0 20px 0 0;
+
+    @include media($mobile) {
+      font-size: rem(20);
+    }
+
+    &--sea::before {
+      color: $contrast-color;
+      font-weight: lighter;
+      content: 'Sea Level: ';
+      opacity: .5;
+    }
+
+    &--ground::before {
+      color: $contrast-color;
+      font-weight: lighter;
+      content: 'Ground Level: ';
+      opacity: .5;
+    }
   }
 
   &__icon {
