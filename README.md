@@ -44,6 +44,9 @@ You'll find an `app.js` file that declares the angular module, dependencies and 
   * **app/scss/base** on this folder you'll find non-component related styles, like grid settings and variables
   * **app/scss/main.scss** use this file to import all other scss files, fonts and scss libraries
 
+## Weather Icons
+  Instead of using the default weather icons from Open Weather Map, I'm using [weather-icons](https://github.com/erikflowers/weather-icons)
+
 
 
 ## Gulp Features
